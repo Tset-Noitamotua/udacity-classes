@@ -1,0 +1,71 @@
+== chart [0]
+    E ->  .  (  E  )  from 0
+    E ->  .  E  -  E  from 0
+    E ->  .  E  +  E  from 0
+    E ->  .  id  from 0
+    E ->  .  id  (  A  )  from 0
+    S ->  .  E  from 0
+== chart [1]
+    S ->  E  .  from 0
+    E ->  E  .  +  E  from 0
+    E ->  E  .  -  E  from 0
+    E ->  id  .  (  A  )  from 0
+    E ->  id  .  from 0
+== chart [2]
+    E ->  .  (  E  )  from 2
+    E ->  .  E  -  E  from 2
+    E ->  .  E  +  E  from 2
+    E ->  .  id  from 2
+    E ->  .  id  (  A  )  from 2
+    NA ->  .  E  from 2
+    NA ->  .  E  ,  NA  from 2
+    E ->  id  (  A  .  )  from 0
+    A ->  .  from 2
+    A ->  .  NA  from 2
+    E ->  id  (  .  A  )  from 0
+== chart [3]
+    E ->  .  (  E  )  from 3
+    E ->  .  E  -  E  from 3
+    E ->  .  E  +  E  from 3
+    E ->  .  id  from 3
+    E ->  .  id  (  A  )  from 3
+    E ->  (  .  E  )  from 2
+== chart [4]
+    E ->  (  E  .  )  from 2
+    E ->  E  .  +  E  from 3
+    E ->  E  .  -  E  from 3
+    E ->  id  .  (  A  )  from 3
+    E ->  id  .  from 3
+== chart [5]
+    E ->  id  (  A  .  )  from 0
+    A ->  NA  .  from 2
+    NA ->  E  .  ,  NA  from 2
+    NA ->  E  .  from 2
+    E ->  E  .  +  E  from 2
+    E ->  E  .  -  E  from 2
+    E ->  (  E  )  .  from 2
+== chart [6]
+    E ->  .  (  E  )  from 6
+    E ->  .  E  -  E  from 6
+    E ->  .  E  +  E  from 6
+    E ->  .  id  from 6
+    E ->  .  id  (  A  )  from 6
+    NA ->  .  E  from 6
+    NA ->  .  E  ,  NA  from 6
+    NA ->  E  ,  .  NA  from 2
+== chart [7]
+    E ->  id  (  A  .  )  from 0
+    A ->  NA  .  from 2
+    NA ->  E  ,  NA  .  from 2
+    NA ->  E  .  ,  NA  from 6
+    NA ->  E  .  from 6
+    E ->  E  .  +  E  from 6
+    E ->  E  .  -  E  from 6
+    E ->  id  .  (  A  )  from 6
+    E ->  id  .  from 6
+== chart [8]
+    S ->  E  .  from 0
+    E ->  E  .  +  E  from 0
+    E ->  E  .  -  E  from 0
+    E ->  id  (  A  )  .  from 0
+True

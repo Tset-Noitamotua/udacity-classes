@@ -1,0 +1,103 @@
+Created by PLY version 3.4 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> js
+Rule 1     js -> element js
+Rule 2     js -> <empty>
+Rule 3     element -> FUNCTION IDENTIFIER LPAREN optparams RPAREN compoundstmt
+Rule 4     element -> sstmt
+Rule 5     optparams -> params
+Rule 6     optparams -> <empty>
+Rule 7     params -> IDENTIFIER COMMA params
+Rule 8     params -> IDENTIFIER
+Rule 9     compoundstmt -> LBRACE stmts RBRACE
+Rule 10    stmts -> sstmt stmts
+Rule 11    stmt_or_compound -> sstmt
+Rule 12    stmt_or_compound -> compoundstmt
+Rule 13    optsemi -> <empty>
+Rule 14    optsemi -> SEMICOLON
+Rule 15    stmts -> <empty>
+Rule 16    sstmt -> IF exp stmt_or_compound optsemi
+Rule 17    sstmt -> WHILE exp compoundstmt optsemi
+Rule 18    sstmt -> IF exp compoundstmt ELSE stmt_or_compound optsemi
+Rule 19    sstmt -> IDENTIFIER EQUAL exp SEMICOLON
+Rule 20    sstmt -> RETURN exp SEMICOLON
+Rule 21    sstmt -> VAR IDENTIFIER EQUAL exp SEMICOLON
+Rule 22    sstmt -> exp SEMICOLON
+Rule 23    exp -> IDENTIFIER
+Rule 24    exp -> LPAREN exp RPAREN
+Rule 25    exp -> NUMBER
+Rule 26    exp -> STRING
+Rule 27    exp -> TRUE
+Rule 28    exp -> FALSE
+Rule 29    exp -> NOT exp
+Rule 30    exp -> FUNCTION LPAREN optparams RPAREN compoundstmt
+Rule 31    exp -> exp PLUS exp
+Rule 32    exp -> exp MINUS exp
+Rule 33    exp -> exp TIMES exp
+Rule 34    exp -> exp MOD exp
+Rule 35    exp -> exp DIVIDE exp
+Rule 36    exp -> exp EQUALEQUAL exp
+Rule 37    exp -> exp LE exp
+Rule 38    exp -> exp LT exp
+Rule 39    exp -> exp GE exp
+Rule 40    exp -> exp GT exp
+Rule 41    exp -> exp ANDAND exp
+Rule 42    exp -> exp OROR exp
+Rule 43    exp -> IDENTIFIER LPAREN optargs RPAREN
+Rule 44    optargs -> args
+Rule 45    optargs -> <empty>
+Rule 46    args -> exp COMMA args
+Rule 47    args -> exp
+
+Terminals, with rules where they appear
+
+ANDAND               : 41
+COMMA                : 7 46
+DIVIDE               : 35
+ELSE                 : 18
+EQUAL                : 19 21
+EQUALEQUAL           : 36
+FALSE                : 28
+FUNCTION             : 3 30
+GE                   : 39
+GT                   : 40
+IDENTIFIER           : 3 7 8 19 21 23 43
+IF                   : 16 18
+LBRACE               : 9
+LE                   : 37
+LPAREN               : 3 24 30 43
+LT                   : 38
+MINUS                : 32
+MOD                  : 34
+NOT                  : 29
+NUMBER               : 25
+OROR                 : 42
+PLUS                 : 31
+RBRACE               : 9
+RETURN               : 20
+RPAREN               : 3 24 30 43
+SEMICOLON            : 14 19 20 21 22
+STRING               : 26
+TIMES                : 33
+TRUE                 : 27
+VAR                  : 21
+error                : 
+
+Nonterminals, with rules where they appear
+
+WHILE                : 17
+args                 : 44 46
+compoundstmt         : 3 12 17 18 30
+element              : 1
+exp                  : 16 17 18 19 20 21 22 24 29 31 31 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40 41 41 42 42 46 47
+js                   : 1 0
+optargs              : 43
+optparams            : 3 30
+optsemi              : 16 17 18
+params               : 5 7
+sstmt                : 4 10 11
+stmt_or_compound     : 16 18
+stmts                : 9 10
+

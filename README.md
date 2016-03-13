@@ -1,2 +1,2 @@
 # udacity-classes
-Udacity class exersises
+Udacity class exercises
